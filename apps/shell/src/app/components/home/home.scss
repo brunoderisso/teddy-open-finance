@@ -1,3 +1,5 @@
+@use '../../../../../../tools/styles/breakpoints.scss' as bp;
+
 :host {
   display: flex;
   justify-content: center;
@@ -6,16 +8,24 @@
 }
 
 .container {
-  width: 400px;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 
+  @include bp.media(md) {
+    width: 521px;
+  }
+
   .main-text {
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 28px;
     height: 44px;
+
+    @include bp.media(md) {
+      font-size: 36px;
+    }
   }
 
   input {
@@ -23,13 +33,23 @@
     height: 60px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 1.5rem;
+    font-size: 20px;
     border-radius: 4px;
     border: 2px solid #D9D9D9;
   }
 
   input::placeholder {
-    font-size: 1.5rem;
+    font-size: 20px;
     color: #D9D9D9;
+  }
+
+  .button {
+    width: 100%;
+
+    .btn-text {
+      font-weight: 700;
+      color: white;
+      font-size: 24px;
+    }
   }
 }

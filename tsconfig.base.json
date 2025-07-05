@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@libs/ui": ["libs/ui/src/index.ts"],
+      "@libs/shared": ["libs/shared/src/index.ts"],
       "customer/Routes": ["apps/customer/src/app/remote-entry/entry.routes.ts"],
       "dashboard/Routes": [
         "apps/dashboard/src/app/remote-entry/entry.routes.ts"

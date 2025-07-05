@@ -4,7 +4,7 @@ $lg: 992px;   // large devices
 $xl: 1200px;  // extra large devices
 $xxl: 1400px; // extra extra large
 
-@mixin mediasQuery($breakpoint) {
+@mixin media($breakpoint) {
   @if $breakpoint == sm {
     @media (min-width: $sm) { @content; }
   } @else if $breakpoint == md {

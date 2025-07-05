@@ -1,5 +1,7 @@
 <div class="container">
   <p class="main-text">Olá, seja bem-vindo!</p>
-  <input type="text" id="name" name="name" placeholder="Digite o seu nome:">
-
+  <input #nameInput type="text" id="name" name="name" placeholder="Digite o seu nome:" />
+  <lib-button class="button" (clicked)="handleClick(nameInput.value)">
+    <span class="btn-text">Entrar</span>
+  </lib-button>
 </div>
