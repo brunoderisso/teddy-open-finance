@@ -22,6 +22,7 @@ export class Home {
   handleClick(name: string) {
     if (name.length > 0) {
       this.cookieService.set('userName', name);
+      window.location.href = 'http://localhost:4201/dashboard';
     }
   }
 }

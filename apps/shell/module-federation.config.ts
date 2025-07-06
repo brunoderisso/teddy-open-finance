@@ -1,7 +1,8 @@
 import { ModuleFederationConfig } from '@nx/module-federation';
 
 const config: ModuleFederationConfig = {
-  name: 'shell'
+  name: 'shell',
+  remotes: ['dashboard'],
 };
 
 export default config;
