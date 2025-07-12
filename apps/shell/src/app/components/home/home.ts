@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { materialModules } from '@libs/ui';
 import { Button } from '@libs/shared';
 import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,11 +19,12 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class Home {
   cookieService = inject(CookieService);
+  router = inject(Router)
 
   handleClick(name: string) {
     if (name.length > 0) {
       this.cookieService.set('userName', name);
-      window.location.href = 'http://localhost:4201/dashboard';
+      this.router.navigate(['/dashboard']);
     }
   }
 }
